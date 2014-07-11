@@ -1,0 +1,3 @@
+g++ -I../BKEngine/Classes -I../BKEngine/includes/other -DDONT_USE_COCOS2D -DBKE_SYS_WINDOWS=1 -w -g0 -std=c++11 -c videoplayer.cpp
+g++ -I../BKEngine/Classes -I../BKEngine/includes/other -DDONT_USE_COCOS2D -DBKE_SYS_WINDOWS=1 -w -g0 -std=c++11 -c Thread.cpp
+g++ videoplayer.o Thread.o -L./lib -lswresample -lswscale -lavformat -lavcodec -lavutil -lmingw32 -lmingwex -static-libgcc -static-libstdc++ -shared -s -o VideoPlayer.dll
